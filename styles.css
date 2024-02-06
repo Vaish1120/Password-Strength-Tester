@@ -1,0 +1,196 @@
+/* Hide scrollbar for Chrome, Safari and Opera */
+body::-webkit-scrollbar {
+    display: none;
+}
+
+
+@keyframes gradient-bg {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  
+/* CSS for Desktop */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #26384a;
+    color: #FFFFFF;
+    margin: 0;
+    padding: 0;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+    background: linear-gradient(-45deg, #06312a, rgb(35, 39, 39), #0c507a, #4875b6);
+    background-size: 400% 400%;
+    animation: gradient-bg 30s ease infinite;
+}
+
+/* CSS for Mobile */
+@media screen and (max-width: 600px) {
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #26384a;
+        color: #FFFFFF;
+        margin: 0;
+        padding: 0;
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+        background: linear-gradient(-45deg, #06312a, rgb(35, 39, 39), #0c507a, #4875b6);
+        background-size: 400% 400%;
+        animation: gradient-bg 30s ease infinite;
+    }
+}
+
+.image-container {
+    text-align: center;
+    padding: 20px;
+}
+
+.image-container img:hover {
+    animation: logo-hover-animation 0.5s ease-in-out forwards;
+  }
+  @keyframes logo-hover-animation {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+
+.title {
+    text-align: center;
+    color: #FFFFFF
+    margin-top: 50px;
+     /* Glow effect */
+     text-shadow: 0 0 10px #00E5FF, 0 0 20px #00E5FF, 0 0 30px #00E5FF, 0 0 40px #00E5FF;
+}
+
+
+
+.input-container {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+#passwordField {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#generateButton {
+    display: block;
+    width: 15%;
+    padding: 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    margin: 20px auto;
+    cursor: pointer;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+}
+
+#generateButton:hover {
+    background-color: #084280;
+    box-shadow: 0px 15px 20px rgb(1, 52, 106);
+    color: #fff;
+    transform: translateY(-7px);
+}
+
+#generateButton:active {
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+#generateButton:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+#generateButton:disabled:hover {
+    background-color: #007BFF;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transform: none;
+}
+
+
+.progress-bar {
+    width: 50%;
+    background-color: #ddd;
+    border-radius: 5px;
+    margin: 0 auto;
+    display: none;
+}
+
+.progress-fill {
+    height: 20px;
+    width: 0;
+    background-color: #007BFF;
+    border-radius: 5px;
+    transition: width 1s ease-in-out; 
+}
+
+.progress-fill[data-progress="25"] {
+    background-color: #FF0000; /* Red for 25% progress */
+}
+
+.progress-fill[data-progress="50"] {
+    background-color: #FFFF00; /* Yellow for 50% progress */
+}
+
+.progress-fill[data-progress="75"] {
+    background-color: #008000; /* Green for 75% progress */
+}
+
+.progress-fill[data-progress="100"] {
+    background-color: #0000FF; /* Blue for 100% progress */
+}
+
+
+.result, .requirements {
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 5px;
+    width: 50%;
+    text-align: center;
+    display: none;
+    font-size: 20px; 
+}
+
+
+.github-link {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    text-decoration: none; /* Removes underline */
+    color: black; /* Changes the link color */
+    display: flex; /* Makes the link a flex container */
+    align-items: center; /* Centers the text vertically */
+}
+.github-link:hover {
+    color: black; /* Keeps the link color the same on hover */
+}
+
+
+/* Footer Styles */
+.site-footer {
+    background-color: #111111;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+  
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+  
+.footer-content p {
+    margin: 5px 0;
+}
